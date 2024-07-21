@@ -1,0 +1,14 @@
+Namespace(no_progress_bar=False, log_interval=100, log_format=None, log_file=None, aim_repo=None, aim_run_hash=None, tensorboard_logdir=None, wandb_project=None, azureml_logging=False, seed=1, cpu=False, tpu=False, bf16=False, memory_efficient_bf16=False, fp16=False, memory_efficient_fp16=False, fp16_no_flatten_grads=False, fp16_init_scale=128, fp16_scale_window=None, fp16_scale_tolerance=0.0, on_cpu_convert_precision=False, min_loss_scale=0.0001, threshold_loss_scale=None, amp=False, amp_batch_retries=2, amp_init_scale=128, amp_scale_window=None, user_dir=None, empty_cache_freq=0, all_gather_list_size=16384, model_parallel_size=1, quantization_config_path=None, profile=False, reset_logging=False, suppress_crashes=False, use_plasma_view=False, plasma_path='/tmp/plasma', criterion='cross_entropy', tokenizer=None, bpe='sentencepiece', optimizer=None, lr_scheduler='fixed', scoring='bleu', task='translation', source_lang='en', target_lang='ne', trainpref='train.spm', validpref='valid.spm', testpref='test.spm', align_suffix=None, destdir='en2ne5000', thresholdtgt=0, thresholdsrc=0, tgtdict=None, srcdict='en2ne_5000_dict.txt', nwordstgt=-1, nwordssrc=-1, alignfile=None, dataset_impl='mmap', joined_dictionary=True, only_source=False, padding_factor=8, workers=8, dict_only=False)
+[en] Dictionary: 5000 types
+[en] train.spm.en: 121549 sents, 3399458 tokens, 0.0% replaced (by <unk>)
+[en] Dictionary: 5000 types
+[en] valid.spm.en: 15194 sents, 425742 tokens, 0.00282% replaced (by <unk>)
+[en] Dictionary: 5000 types
+[en] test.spm.en: 15194 sents, 420314 tokens, 0.00286% replaced (by <unk>)
+[ne] Dictionary: 5000 types
+[ne] train.spm.ne: 121549 sents, 3368868 tokens, 0.0% replaced (by <unk>)
+[ne] Dictionary: 5000 types
+[ne] valid.spm.ne: 15194 sents, 420157 tokens, 0.00309% replaced (by <unk>)
+[ne] Dictionary: 5000 types
+[ne] test.spm.ne: 15194 sents, 414886 tokens, 0.00169% replaced (by <unk>)
+Wrote preprocessed data to en2ne5000
