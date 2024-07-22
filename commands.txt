@@ -1,0 +1,7 @@
+spm_encode --model en2ne/en2ne5000.model < input.txt > input.sp
+
+fairseq-interactive \
+--path en2ne/checkpoint_best.pt en2ne/en2ne5000 \
+--beam 5 \
+--source-lang en \
+--target-lang ne < input.sp | output.sp
