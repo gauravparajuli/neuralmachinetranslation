@@ -27,7 +27,16 @@ ne2en = TransformerModel.from_pretrained(
     data_name_or_path='ne2en/ne2en20000'
 )
 
-def translate_sentence(sentence, model, tokenizer, ne2en=False):
+print(type(ne2en))
+
+def en2ne_translate_sentence(sentence, reverse=False):
+    tokenizer = en2ne_sp
+    model = en2ne
+    if reverse==True:
+        sentence = normalizer.normalize(sentence)
+        tokenizer = ne2en_sp
+        model = ne2en
+
     # Tokenize the input sentence
     tokenized_sentence = tokenizer.encode(sentence, out_type=str)
     tokenized_sentence = ' '.join(tokenized_sentence)
@@ -44,5 +53,7 @@ def translate_sentence(sentence, model, tokenizer, ne2en=False):
 
 # Example usage
 input_sentence = "Hello, how are you?"
-translated_sentence = translate_sentence(input_sentence, en2ne, en2ne_sp)
+input_sentence2 = "मलाई जाँडो भयो।"
+# translated_sentence = en2ne_translate_sentence(input_sentence)
+translated_sentence = en2ne_translate_sentence(input_sentence2, reverse=True)
 print(f"Translated sentence: {translated_sentence}")
